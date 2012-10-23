@@ -2,7 +2,7 @@
 
 TOPDIR=$(pwd)
 BUILDDIR=$TOPDIR/build
-PREFIX=/opt/mono-2.11
+PREFIX=/opt/mono-3.0
 
 export PATH=$PREFIX/bin:$PATH
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
