@@ -9,6 +9,7 @@ export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
 export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
 
 
+
 echo "updating existing system"
 sudo apt-get update
 sudo apt-get upgrade -y
