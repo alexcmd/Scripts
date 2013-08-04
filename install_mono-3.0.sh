@@ -2,7 +2,7 @@
 
 TOPDIR=$(pwd)
 BUILDDIR=$TOPDIR/build
-PREFIX=/opt/mono-3.0
+PREFIX=/usr/local
 
 export PATH=$PREFIX/bin:$PATH
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
@@ -25,13 +25,13 @@ echo
 
 cd $BUILDDIR
 
-PACKAGES=("mono-3.0.1"
+PACKAGES=("mono-3.2.0"
 "libgdiplus-2.10.9"
 "gtk-sharp-2.12.11"
 "xsp-2.10.2"
 "mod_mono-2.10")
 
-URLS=("http://download.mono-project.com/sources/mono/mono-3.0.1.tar.bz2"
+URLS=("http://download.mono-project.com/sources/mono/mono-3.2.0.tar.bz2"
 "http://download.mono-project.com/sources/libgdiplus/libgdiplus-2.10.9.tar.bz2"
 "http://origin-download.mono-project.com/sources/gtk-sharp212/gtk-sharp-2.12.11.tar.bz2"
 "http://download.mono-project.com/sources/xsp/xsp-2.10.2.tar.bz2"
@@ -75,7 +75,7 @@ for i in "${PACKAGES[@]}"
 do
 	cd $BUILDDIR/$i
 	./configure --prefix=$PREFIX
-	make
+	make -j8
 	
 	if [ "$i" = ${PACKAGES[0]} ]
 	then
