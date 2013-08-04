@@ -1,0 +1,5 @@
+mkdir mono-3.0
+cd mono-3.0
+wget --no-check-certificate https://raw.github.com/alexcmd/Scripts/master/install_mono-3.0.sh
+chmod 755 install_mono-3.0.sh
+./install_mono-3.0.sh
